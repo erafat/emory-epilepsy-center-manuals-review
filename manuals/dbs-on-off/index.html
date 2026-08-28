@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>DBS On/Off Quick Reference — Colleague Review</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --paper: #ffffff;
+      --ink: #1f2428;
+      --muted: rgba(31, 36, 40, .64);
+      --quiet: rgba(31, 36, 40, .42);
+      --line: rgba(31, 36, 40, .16);
+      --line-soft: rgba(31, 36, 40, .08);
+      --soft: #f4f7f8;
+      --soft-2: #fbf4e9;
+      --navy: #394a50;
+      --accent: #5a829b;
+      --ochre: #efbd64;
+      --clay: #cf7f46;
+      --amber-bg: #fff7ed;
+      --amber-line: #fdba74;
+      --amber-ink: #7c2d12;
+      --shadow: rgba(16, 24, 32, .08);
+      --serif: Georgia, "Times New Roman", serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(90deg, var(--line-soft) 1px, transparent 1px),
+        linear-gradient(0deg, var(--line-soft) 1px, transparent 1px),
+        var(--bg);
+      background-size: 42px 42px;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+
+    .page {
+      width: min(980px, calc(100vw - 32px));
+      margin: 28px auto;
+      background: color-mix(in srgb, var(--paper) 96%, transparent);
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 60px var(--shadow);
+      padding: 42px 48px 52px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 128px 1fr;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: clamp(34px, 4.5vw, 52px);
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .portrait {
+      width: 128px;
+      aspect-ratio: 1;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+      background: var(--soft-2);
+      box-shadow: 0 14px 32px var(--shadow);
+      transform: rotate(-2deg);
+    }
+
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .callout {
+      margin: 20px 0 22px;
+      border: 1px solid color-mix(in srgb, var(--clay) 55%, transparent);
+      background: color-mix(in srgb, var(--soft-2) 82%, white);
+      color: var(--amber-ink);
+      padding: 12px 14px;
+      font-weight: 650;
+    }
+
+    h2 {
+      margin: 30px 0 12px;
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      color: var(--navy);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 10px;
+      font-size: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 18px;
+      table-layout: fixed;
+      font-size: 15px;
+      background: var(--paper);
+    }
+
+    th,
+    td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--soft);
+      color: var(--navy);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: 0;
+    }
+
+    .workflow th:first-child,
+    .workflow td:first-child {
+      width: 86px;
+      min-width: 86px;
+      white-space: nowrap;
+      font-weight: 750;
+    }
+
+    .workflow th:first-child {
+      font-size: 12px;
+    }
+
+    .stop-table th:first-child,
+    .stop-table td:first-child {
+      width: 34%;
+    }
+
+    .checks-table th:first-child,
+    .checks-table td:first-child {
+      width: 34%;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 8px;
+    }
+
+    .step-card {
+      break-inside: avoid;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+
+    figure {
+      margin: 12px 0 0;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 10px;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1;
+      max-height: 520px;
+      object-fit: cover;
+      background: #111827;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+
+    .note-list {
+      border: 1px solid var(--line);
+      margin: 10px 0 18px;
+    }
+
+    .note-list p {
+      margin: 0;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .note-list p:last-child {
+      border-bottom: 0;
+    }
+
+    footer {
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    @media (min-width: 820px) {
+      .media-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 24px 16px 34px;
+        border: 0;
+        box-shadow: none;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      header {
+        grid-template-columns: 84px 1fr;
+        gap: 14px;
+      }
+
+      .portrait {
+        width: 84px;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 9px 10px;
+      }
+
+      .workflow th:first-child,
+      .workflow td:first-child {
+        width: 70px;
+        min-width: 70px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+        padding: 0.45in;
+      }
+
+      .step-card,
+      figure,
+      table {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header style="grid-template-columns: 1fr;">
+      <div>
+        <p class="eyebrow">Clinical Education Manual</p>
+        <h1>DBS On/Off Quick Reference</h1>
+        <p class="subtitle">Medtronic DBS clinician programmer workflow for turning therapy off and back on, derived from a bedside teaching demonstration.</p>
+      </div>
+    </header>
+
+    <section class="callout">
+      <strong>Draft for colleague review — not approved institutional policy.</strong> Training aid only. Use current device labeling, MRI eligibility workflow, patient-specific orders, and local policy. If any screen, device model, or safety status differs from this demo, stop and escalate to the DBS clinician/device representative.
+    </section>
+
+    <section>
+      <h2>One-Page Workflow</h2>
+      <table class="workflow">
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.</td>
+            <td>Start the tablet and open the Medtronic DBS clinician programmer app.</td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>Connect to the patient by selecting <strong>Connect</strong> and turning on the communicator.</td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>Position the communicator over the implanted generator and keep it in place for the older device shown.</td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td>Review impedance guidance: green/OK, yellow/Investigate, red/Avoid.</td>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td>Check impedance on both sides/leads as applicable and confirm the values are acceptable.</td>
+          </tr>
+          <tr>
+            <td>6.</td>
+            <td>Turn stimulation <strong>Off</strong> from the stimulation control.</td>
+          </tr>
+          <tr>
+            <td>7.</td>
+            <td>Open <strong>End Session</strong>, confirm the session is complete, and exit.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="stop-table">
+        <thead>
+          <tr>
+            <th>Stop / Escalate</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Impedance is red or marked Avoid.</td>
+            <td>In the teaching demonstration, MRI is not allowed if a contact appears broken/red.</td>
+          </tr>
+          <tr>
+            <td>Communicator will not connect.</td>
+            <td>The older device in the demo requires direct physical placement over the implanted generator; newer devices may connect by Bluetooth.</td>
+          </tr>
+          <tr>
+            <td>Wrong group/program is selected.</td>
+            <td>Before leaving therapy off or turning it back on, verify the selected group is the intended one.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Detailed Walkthrough</h2>
+      <div class="media-grid">
+        <article class="step-card">
+          <h3>1. Start the tablet and open DBS</h3>
+          <p>Open the DBS clinician programmer screen and start from the main DBS menu.</p>
+          <figure>
+            <img src="assets/images/step-01-open-dbs.jpg" alt="DBS clinician programmer home screen">
+            <figcaption>Start at the DBS clinician programmer home screen.</figcaption>
+          </figure>
+        </article>
+
+        <article class="step-card">
+          <h3>2. Connect to the patient</h3>
+          <p>Select <strong>Connect</strong> and turn on the communicator. The light indicates the communicator is powered and ready to connect.</p>
+          <figure>
+            <img src="assets/images/step-02-connect.jpg" alt="Communicator being turned on in front of DBS Connect screen">
+            <figcaption>Turn on the communicator, then connect from the DBS app.</figcaption>
+          </figure>
+        </article>
+
+        <article class="step-card">
+          <h3>3. Position the communicator</h3>
+          <p>For the older device shown, place the communicator directly over the implanted generator and keep it positioned while interrogating or changing therapy.</p>
+          <figure>
+            <img src="assets/images/step-03-positioned.jpg" alt="Communicator positioned over implanted generator">
+            <figcaption>Keep the communicator physically positioned over the implanted generator.</figcaption>
+          </figure>
+        </article>
+
+        <article class="step-card">
+          <h3>4. Impedance guidance</h3>
+          <p>Review the impedance guidance screen. Green/OK is within normal range; yellow/Investigate needs review; red/Avoid suggests a possible fault condition.</p>
+          <figure>
+            <img src="assets/images/step-04-impedance-guidance.jpg" alt="Impedance guidance screen showing OK, Investigate, and Avoid">
+            <figcaption>Use the guidance screen to interpret impedance status.</figcaption>
+          </figure>
+        </article>
+
+        <article class="step-card">
+          <h3>5. Impedance - check both sides</h3>
+          <p>Check the impedance screen for both sides/leads as applicable. In this demo, the green checks indicate acceptable values.</p>
+          <figure>
+            <img src="assets/images/step-05-impedance-both-sides.jpg" alt="Electrode impedance screen with green checks">
+            <figcaption>Confirm both sides/leads show acceptable impedance results.</figcaption>
+          </figure>
+        </article>
+
+        <article class="step-card">
+          <h3>6. Turn stimulation off</h3>
+          <p>Use the stimulation control to switch therapy off. Confirm the control reflects the intended off state before proceeding.</p>
+          <figure>
+            <img src="assets/images/step-06-off.jpg" alt="Stimulation toggle on DBS programmer">
+            <figcaption>Switch stimulation off from the stimulation control.</figcaption>
+          </figure>
+        </article>
+
+        <article class="step-card">
+          <h3>7. End session</h3>
+          <p>Open <strong>End Session</strong>, confirm the session changes, and exit the session.</p>
+          <figure>
+            <img src="assets/images/step-07-end-session.jpg" alt="End Session section with OK button">
+            <figcaption>Use End Session to close out after confirming the therapy state.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Turning Stimulation Back On</h2>
+      <p>The turn-on process is the same connection workflow in reverse: reconnect to the device, verify the intended group/program, then switch stimulation to On. The teaching demonstration emphasizes correcting the selected group before leaving the patient set up for the next turn-on.</p>
+
+      <table class="checks-table">
+        <thead>
+          <tr>
+            <th>Check</th>
+            <th>What to confirm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Correct patient/device connection</td>
+            <td>The programmer has connected/interrogated the implanted DBS device.</td>
+          </tr>
+          <tr>
+            <td>Correct group/program selected</td>
+            <td>The boxed or selected group is the one intended for the patient when therapy is restored.</td>
+          </tr>
+          <tr>
+            <td>Stimulation status</td>
+            <td>Switch stimulation to On, then confirm the programmer reflects the intended on status before ending the session.</td>
+          </tr>
+          <tr>
+            <td>Clinical context</td>
+            <td>Confirm whether this is post-MRI restoration, clinic programming, or another supervised workflow.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Important Teaching Notes From The Video</h2>
+      <div class="note-list">
+        <p><strong>Older vs newer devices:</strong> the demonstrated older device requires direct communicator placement over the generator; newer devices may use Bluetooth.</p>
+        <p><strong>MRI safety:</strong> The teaching demonstration states that if impedance/contact status is red, MRI should not proceed because this may indicate a broken contact.</p>
+        <p><strong>Group selection matters:</strong> before turning off for MRI or preparing for later turn-on, make sure the intended group/program is selected.</p>
+        <p><strong>Programming details are separate:</strong> the video includes discussion of double monopolar settings, volts vs milliamps, and cycling intervals. Those details should not be treated as a generic programming protocol.</p>
+      </div>
+    </section>
+
+    <footer>
+      Source video: /Users/er/Downloads/IMG_8171.MOV. Draft HTML for review before PDF finalization. Screenshots were selected from the video and cropped to avoid unnecessary identifiers.
+    </footer>
+  </main>
+</body>
+</html>
