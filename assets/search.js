@@ -14,6 +14,13 @@
     });
     status.textContent = matches === 0 ? 'No manuals found. Try a different title or keyword.' : `${matches} of ${cards.length} manuals shown`;
   }
+  document.querySelectorAll('.manual-tag').forEach(button => {
+    button.addEventListener('click', () => {
+      input.value = button.dataset.tag;
+      filter();
+      input.focus();
+    });
+  });
   input.addEventListener('input', filter);
   input.addEventListener('keydown', event => {
     if (event.key === 'Escape') { input.value = ''; filter(); }

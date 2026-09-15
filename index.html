@@ -21,7 +21,7 @@
 
     <div class="manual-search" hidden>
       <label for="manual-search">Search manuals</label>
-      <input id="manual-search" type="search" placeholder="Search by title or keyword…" aria-controls="manual-results" aria-describedby="search-status" autocomplete="off">
+      <input id="manual-search" type="search" placeholder="Search by title, tag, or keyword…" aria-controls="manual-results" aria-describedby="search-status" autocomplete="off">
       <p id="search-status" class="search-status" role="status" aria-live="polite" aria-atomic="true"></p>
     </div>
 
@@ -36,7 +36,7 @@
           <p class="kicker">Device Manual</p>
           <h3>DBS On/Off Quick Reference</h3>
           <p>Seven-step quick reference for connecting to a Medtronic DBS programmer workflow, checking impedance, turning stimulation off, and ending the session.</p>
-        </div>
+        <p class="manual-tags" aria-label="Tags"><button type="button" class="manual-tag" data-tag="stim" aria-label="Search tag stim">stim</button> <button type="button" class="manual-tag" data-tag="fellow" aria-label="Search tag fellow">fellow</button> <button type="button" class="manual-tag" data-tag="diane" aria-label="Search tag diane">diane</button></p></div>
         <div class="actions">
           <a href="manuals/dbs-on-off/">Open HTML</a>
         </div>
@@ -47,7 +47,7 @@
           <p class="kicker">EMU Stimulation Manual</p>
           <h3>Electrical Stimulation Mapping SOP</h3>
           <p>Policy and procedure manual for electrical stimulation mapping during intracranial EEG recordings.</p>
-        </div>
+        <p class="manual-tags" aria-label="Tags"><button type="button" class="manual-tag" data-tag="sEEG" aria-label="Search tag sEEG">sEEG</button> <button type="button" class="manual-tag" data-tag="stim" aria-label="Search tag stim">stim</button> <button type="button" class="manual-tag" data-tag="fellow" aria-label="Search tag fellow">fellow</button></p></div>
         <div class="actions">
           <a href="manuals/electrical-stimulation-mapping-sop/pdf/Electrical%20Stimulation%20Mapping%20SOP.pdf">Open PDF</a>
         </div>
@@ -58,7 +58,7 @@
           <p class="kicker">EMU Stimulation Manual</p>
           <h3>Thalamic Protocol</h3>
           <p>Protocol/manual for setting up and running thalamic stimulation workflow steps in the EMU context.</p>
-        </div>
+        <p class="manual-tags" aria-label="Tags"><button type="button" class="manual-tag" data-tag="sEEG" aria-label="Search tag sEEG">sEEG</button> <button type="button" class="manual-tag" data-tag="stim" aria-label="Search tag stim">stim</button> <button type="button" class="manual-tag" data-tag="fellow" aria-label="Search tag fellow">fellow</button></p></div>
         <div class="actions">
           <a href="manuals/thalamic-protocol/pdf/Thalamic%20Protocol.pdf">Open PDF</a>
         </div>
@@ -69,16 +69,16 @@
           <p class="kicker">EMU Operations Resource</p>
           <h3>Weekend On Call</h3>
           <p>Synergy orders, ReAct referrals, provider responsibilities, NP handoff, and faxing during extended NP absence.</p>
-        </div>
+        <p class="manual-tags" aria-label="Tags"><button type="button" class="manual-tag" data-tag="oncall" aria-label="Search tag oncall">oncall</button> <button type="button" class="manual-tag" data-tag="fellow" aria-label="Search tag fellow">fellow</button></p></div>
         <div class="actions"><a href="manuals/weekend-no-np-orders-referrals/">Open</a></div>
       </article>
 
       <article class="manual-card">
-        <div><p class="kicker">EMU Workflow Manual</p><h3>How to Clip Seizures</h3><p>Seizure clipping in Natus, including start and end markers, clip naming, and epoch selection.</p></div>
+        <div><p class="kicker">EMU Workflow Manual</p><h3>How to Clip Seizures</h3><p>Seizure clipping in Natus, including start and end markers, clip naming, and epoch selection.</p><p class="manual-tags" aria-label="Tags"><button type="button" class="manual-tag" data-tag="fellow" aria-label="Search tag fellow">fellow</button></p></div>
         <div class="actions"><a href="manuals/seizure-clipping-natus-2026/">Open</a></div>
       </article>
       <article class="manual-card">
-        <div><p class="kicker">Clinical Pearls</p><h3>Diane’s Pearls</h3><p>Diane’s clinical and workflow pearls by topic. Includes Kaiser Permanente coverage notes for Nayzilam, diazepam, Valtoco, Fintepla, and Epidiolex.</p></div>
+        <div><p class="kicker">Clinical Pearls</p><h3>Diane’s Pearls</h3><p>Diane’s clinical and workflow pearls by topic. Includes Kaiser Permanente coverage notes for Nayzilam, diazepam, Valtoco, Fintepla, and Epidiolex.</p><p class="manual-tags" aria-label="Tags"><button type="button" class="manual-tag" data-tag="diane" aria-label="Search tag diane">diane</button> <button type="button" class="manual-tag" data-tag="fellow" aria-label="Search tag fellow">fellow</button></p></div>
         <div class="actions"><a href="manuals/dianes-pearls/">Open</a></div>
       </article>
     </section>
