@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="../../assets/site.css">
 
 <style>
+.manual-back { display:inline-flex;align-items:center;min-height:44px;margin-bottom:16px;color:var(--accent);font-size:14px; }
+.manual-back:hover { text-decoration:underline; }
+.manual-back:focus-visible { outline:2px solid var(--accent);outline-offset:4px; }
 .section-illustration { width:96px;height:72px;flex:none; }
 .section-heading:has(.section-illustration) { align-items:center; }
 @media(max-width:480px){.section-illustration{width:76px;height:58px;}}
@@ -28,6 +31,7 @@ body:has(.fax-dialog[open]) { overflow:hidden; }
 </head>
 <body>
   <main class="page">
+    <a class="manual-back" href="../../">← All manuals</a>
     <header class="hero">
       <p class="eyebrow">EMU Operations Resource</p>
       <h1>Weekend On Call</h1>
