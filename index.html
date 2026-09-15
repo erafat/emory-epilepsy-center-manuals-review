@@ -19,7 +19,13 @@
       <strong>Draft for colleague review — not approved institutional policy.</strong> Do not use this site as a patient-specific order or standalone clinical instruction. Confirm all workflows against current device labeling, institutional policy, and attending direction.
     </section>
 
-    <section>
+    <div class="manual-search" hidden>
+      <label for="manual-search">Search manuals</label>
+      <input id="manual-search" type="search" placeholder="Search by title or keyword…" aria-controls="manual-results" aria-describedby="search-status" autocomplete="off">
+      <p id="search-status" class="search-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+
+    <section id="manual-results">
       <div class="section-heading">
         <h2>Review Set</h2>
         <span>03</span>
@@ -60,5 +66,6 @@
 
     </section>
   </main>
+  <script src="assets/search.js" defer></script>
 </body>
 </html>
