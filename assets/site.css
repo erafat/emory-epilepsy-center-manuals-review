@@ -211,3 +211,11 @@ h3 {
     flex-wrap: wrap;
   }
 }
+
+/* Manual shelf search */
+.manual-search { margin: 0 0 30px; }
+.manual-search label { display: block; margin-bottom: 8px; color: var(--navy); font-weight: 650; }
+.manual-search input { display: block; width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 3px; background: var(--paper); color: var(--ink); font: inherit; }
+.manual-search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.search-status { margin-top: 10px; color: var(--muted); font-size: 14px; }
+.manual-card[hidden] { display: none; }
