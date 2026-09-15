@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="../../assets/site.css">
 
 <style>
+.section-illustration { width:96px;height:72px;flex:none; }
+.section-heading:has(.section-illustration) { align-items:center; }
+@media(max-width:480px){.section-illustration{width:76px;height:58px;}}
 .fax-option { display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:11px 15px;background:var(--navy);color:white;font:600 14px var(--sans);border-radius:3px; }
 .fax-option:focus-visible,.fax-close:focus-visible { outline:3px solid var(--accent);outline-offset:3px; }
 .fax-dialog { width:min(720px,calc(100vw - 32px));max-height:85dvh;padding:0;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);box-shadow:0 24px 90px #0003; }
@@ -112,7 +115,7 @@ body:has(.fax-dialog[open]) { overflow:hidden; }
     <section>
       <div class="section-heading">
         <h2>Patient Materials</h2>
-        <span>On the cart</span>
+        <svg class="section-illustration" viewBox="0 0 112 80" role="img" aria-label="Patient materials on the cart" xmlns="http://www.w3.org/2000/svg"><title>Patient materials on the cart</title><ellipse cx="58" cy="73" rx="38" ry="4" fill="#e9edef"/><g stroke="#394a50" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 19H14V11H8M21 19V65M91 19V65" fill="none"/><path d="M18 23H94V29H18Z" fill="#dce7ec"/><path d="M18 52H94V58H18Z" fill="#dce7ec"/><path d="M33 23V8L58 5L61 23" fill="#fbf4e9"/><path d="M39 12L52 10M40 17L54 15" stroke="#cf7f46"/><path d="M63 23V12H83V23" fill="#f1d4bd"/><path d="M28 52V38H52V52M61 52V42H83V52" fill="#fbf4e9"/><path d="M34 43H46M67 47H77" stroke="#5a829b"/><circle cx="25" cy="68" r="5" fill="white"/><circle cx="86" cy="68" r="5" fill="white"/></g></svg>
       </div>
       <ul class="pattern-list">
         <li>PNES information and the ReAct handout.</li>
@@ -124,7 +127,7 @@ body:has(.fax-dialog[open]) { overflow:hidden; }
     <section>
       <div class="section-heading">
         <h2>Documentation Phrases</h2>
-        <span>Epic</span>
+        <svg class="section-illustration" viewBox="0 0 112 80" role="img" aria-label="Epic electronic documentation" xmlns="http://www.w3.org/2000/svg"><title>Epic electronic documentation</title><ellipse cx="57" cy="73" rx="41" ry="4" fill="#e9edef"/><g stroke="#394a50" stroke-width="2.2" stroke-linejoin="round"><rect x="15" y="7" width="82" height="50" rx="5" fill="#dce7ec"/><rect x="21" y="13" width="70" height="36" rx="1" fill="#fffdf8"/><path d="M49 57V65H38V69H74V65H63V57" fill="#dce7ec"/></g><text x="56" y="38" text-anchor="middle" fill="#b9443d" font-family="Georgia,serif" font-style="italic" font-weight="bold" font-size="27">Epic</text><path d="M78 37L80 48L83 45L87 49L89 47L85 43L90 41Z" fill="#5a829b" stroke="white" stroke-width="1"/></svg>
       </div>
       <article class="manual-card">
         <div>
