@@ -6,6 +6,22 @@
   <meta name="robots" content="noindex,nofollow,noarchive">
   <title>Weekend On Call — EMU Orders &amp; Referrals</title>
   <link rel="stylesheet" href="../../assets/site.css">
+
+<style>
+.fax-option { display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:11px 15px;background:var(--navy);color:white;font:600 14px var(--sans);border-radius:3px; }
+.fax-option:focus-visible,.fax-close:focus-visible { outline:3px solid var(--accent);outline-offset:3px; }
+.fax-dialog { width:min(720px,calc(100vw - 32px));max-height:85dvh;padding:0;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);box-shadow:0 24px 90px #0003; }
+.fax-dialog::backdrop { background:rgba(20,32,37,.5); }
+.fax-dialog-header { display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;padding:18px 24px;background:var(--paper);border-bottom:1px solid var(--line);z-index:1; }
+.fax-dialog-header h2 { font-size:28px; }
+.fax-close { border:1px solid var(--line);background:var(--soft);color:var(--ink);padding:9px 12px;cursor:pointer;font:600 14px var(--sans);border-radius:3px; }
+.fax-dialog-content { padding:22px 24px 28px; }
+.fax-dialog-content p { margin-bottom:18px;line-height:1.6; }
+.fax-dialog-content h4 { margin:24px 0 12px; }
+.fax-dialog-content ol { margin:0 0 20px; }
+body:has(.fax-dialog[open]) { overflow:hidden; }
+@media(max-width:480px) { .fax-dialog-header,.fax-dialog-content { padding:16px; }.fax-dialog-header h2{font-size:24px;} }
+</style>
 </head>
 <body>
   <main class="page">
@@ -87,31 +103,10 @@
             <li>On the hospital fax machine, dial <strong>9</strong> before the external fax number.</li>
           </ol>
           <p>The coordinator is arranging access to the EMU schedule so the patient can be looked up by name. The coordinator will add the non-clinical information and fax the order or referral with the required supporting material. The online ReACT form requests documentation confirming the FND diagnosis and the applicable diagnostic workup. The Synergy form requests clinical records and a copy of the insurance card.</p>
+          <a class="fax-option" id="doximity-fax" href="https://support.doximity.com/hc/en-us/articles/360031351294-How-to-Send-a-Fax-From-the-Doximity-Website" aria-haspopup="dialog" aria-controls="doximity-dialog">Or use Doximity Fax <span aria-hidden="true">↗</span></a>
         </div>
       </article>
-      <article class="manual-card" id="doximity-fax">
-        <div>
-          <p class="kicker">Alternative to the fax machine</p>
-          <h3>Or use Doximity Fax</h3>
-          <p>Use your activated Doximity fax account in accordance with local patient-information policy. Send to the same intended recipient specified in the handoff above.</p>
-          <p><strong>Enter the recipient’s fax number directly. The leading 9 is for the hospital fax machine only.</strong></p>
-          <h4>From the website</h4>
-          <ol class="pattern-list">
-            <li>Open <a href="https://www.doximity.com/inbox/faxes"><u>Doximity Fax</u></a>, sign in, and select <strong>New</strong>.</li>
-            <li>Select the recipient by fax number or saved contact. Add cover-page text as needed.</li>
-            <li>Use the paperclip <strong>Add</strong> control to attach the completed, signed forms and required records. Review the recipient and all pages, then select <strong>Send</strong>.</li>
-          </ol>
-          <h4>From iPhone or iPad</h4>
-          <ol class="pattern-list">
-            <li>In Doximity, open <strong>Fax</strong>, unlock the inbox, and tap <strong>New Fax</strong>.</li>
-            <li>Enter the recipient in <strong>To</strong>. Check <strong>Cc EHR</strong>: a previously entered number persists until removed.</li>
-            <li>Tap <strong>+</strong> to attach a file or scan the signed forms. Document scanning requires iOS 18 or later. Include all required supporting records.</li>
-            <li>Review the recipient, attachments, and cover page; tap the send arrow. Review the fax in the <strong>Sent</strong> tab and check its delivery status.</li>
-          </ol>
-          <p>For image attachments, enable <strong>Contains Images</strong> (website: <strong>Attachments Contain Images</strong>) to preserve image quality. Keep attachments within Doximity’s 50 MB limit.</p>
-          <p>Official instructions: <a href="https://support.doximity.com/hc/en-us/articles/360031351294-How-to-Send-a-Fax-From-the-Doximity-Website"><u>Website</u></a> · <a href="https://support.doximity.com/hc/en-us/articles/360050207154-How-to-Send-a-Fax-and-Other-Features-on-your-iOS-Device"><u>iPhone / iPad</u></a> · <a href="https://support.doximity.com/hc/en-us/articles/360030888213-How-to-Send-a-Fax-and-Other-Features-on-your-Android-Device"><u>Android</u></a>. Checked September 14, 2026.</p>
-        </div>
-      </article>
+
     </section>
 
     <section>
@@ -138,6 +133,43 @@
         </div>
       </article>
     </section>
-  </main>
+  <dialog class="fax-dialog" id="doximity-dialog" aria-labelledby="doximity-title">
+<div class="fax-dialog-header"><h2 id="doximity-title">Doximity Fax</h2><form method="dialog"><button class="fax-close" autofocus>Close</button></form></div>
+<div class="fax-dialog-content">
+          
+          
+          <p>Use your activated Doximity fax account in accordance with local patient-information policy. Send to the same intended recipient specified in the handoff above.</p>
+          <p><strong>Enter the recipient’s fax number directly. The leading 9 is for the hospital fax machine only.</strong></p>
+          <h4>From the website</h4>
+          <ol class="pattern-list">
+            <li>Open <a href="https://www.doximity.com/inbox/faxes"><u>Doximity Fax</u></a>, sign in, and select <strong>New</strong>.</li>
+            <li>Select the recipient by fax number or saved contact. Add cover-page text as needed.</li>
+            <li>Use the paperclip <strong>Add</strong> control to attach the completed, signed forms and required records. Review the recipient and all pages, then select <strong>Send</strong>.</li>
+          </ol>
+          <h4>From iPhone or iPad</h4>
+          <ol class="pattern-list">
+            <li>In Doximity, open <strong>Fax</strong>, unlock the inbox, and tap <strong>New Fax</strong>.</li>
+            <li>Enter the recipient in <strong>To</strong>. Check <strong>Cc EHR</strong>: a previously entered number persists until removed.</li>
+            <li>Tap <strong>+</strong> to attach a file or scan the signed forms. Document scanning requires iOS 18 or later. Include all required supporting records.</li>
+            <li>Review the recipient, attachments, and cover page; tap the send arrow. Review the fax in the <strong>Sent</strong> tab and check its delivery status.</li>
+          </ol>
+          <p>For image attachments, enable <strong>Contains Images</strong> (website: <strong>Attachments Contain Images</strong>) to preserve image quality. Keep attachments within Doximity’s 50 MB limit.</p>
+          <p>Official instructions: <a href="https://support.doximity.com/hc/en-us/articles/360031351294-How-to-Send-a-Fax-From-the-Doximity-Website"><u>Website</u></a> · <a href="https://support.doximity.com/hc/en-us/articles/360050207154-How-to-Send-a-Fax-and-Other-Features-on-your-iOS-Device"><u>iPhone / iPad</u></a> · <a href="https://support.doximity.com/hc/en-us/articles/360030888213-How-to-Send-a-Fax-and-Other-Features-on-your-Android-Device"><u>Android</u></a>. Checked September 14, 2026.</p>
+        </div></dialog>
+</main>
+
+<script>
+(() => {
+ const dialog = document.getElementById('doximity-dialog');
+ const trigger = document.getElementById('doximity-fax');
+ if (!dialog || !trigger || typeof dialog.showModal !== 'function') return;
+ trigger.addEventListener('click', event => { event.preventDefault(); dialog.showModal(); });
+ dialog.addEventListener('close', () => trigger.focus());
+ dialog.addEventListener('click', event => {
+   const box = dialog.getBoundingClientRect();
+   if (event.target === dialog && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) dialog.close();
+ });
+})();
+</script>
 </body>
 </html>
