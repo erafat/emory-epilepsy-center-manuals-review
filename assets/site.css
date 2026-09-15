@@ -219,3 +219,9 @@ h3 {
 .manual-search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .search-status { margin-top: 10px; color: var(--muted); font-size: 14px; }
 .manual-card[hidden] { display: none; }
+
+/* Searchable manual tags */
+.manual-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.manual-tag { display: inline-flex; align-items: center; min-height: 36px; padding: 5px 10px; border: 1px solid var(--line); border-radius: 20px; background: var(--soft); color: var(--navy); font: 12px var(--mono); cursor: pointer; }
+.manual-tag:hover { background: var(--warm); border-color: var(--accent); }
+.manual-tag:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
