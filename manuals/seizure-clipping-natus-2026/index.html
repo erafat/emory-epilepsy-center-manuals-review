@@ -6,9 +6,9 @@
 <body><main class="page"><a class="back-link" href="../../">← All manuals</a>
 <header class="hero"><p class="eyebrow">EMU Workflow Manual</p><h1>How to Clip Seizures</h1><p class="lede">Instructions for clipping and downloading seizure onset EDF files in Natus.</p></header>
 <section class="notice"><strong>Draft for colleague review — not approved institutional policy.</strong> Confirm this workflow against local policy and attending direction before use.</section>
-<section class="manual-body"><div class="section-heading"><h2>Before you begin</h2></div>
+<section class="manual-body"><div class="section-heading"><h2 id="before-you-begin">Before you begin</h2></div>
 <p>Use authorized Natus access and a designated workstation. Do not interrupt clinical review of files. The source notes that remote access can be used to clip files, but downloading data requires connection to a major workstation.</p>
-<div class="section-heading"><h2>Clip the study</h2></div>
+<div class="section-heading"><h2 id="clip-the-study">Clip the study</h2></div>
 <p>Prune the study of interest. Switch database to ICM and find the file of interest.  You need to prune the start time after the patient&#x27;s specific montage has been applied, so you know which electrode is which.</p>
 <p>To standardize our seizure clips, please identify the start time of the seizure and mark it precisely using the UEO label. Then go exactly 5 minutes (300 seconds) prior to the onset, which will be the start of the clip. The easiest way to do this is to select the UEO annotation in Natus, hit Ctrl+G, and set the time to 5 minutes EARLIER, while keeping the seconds the same. (e.g. 14:34:45 becomes 14:29:45)</p>
 <p>Click on <img class="tool-icon" src="assets/image1.png" alt="Mark clip start"> to mark the start time of the clip. You will be prompted to name your clip. Please name the clip in the following fashion: szXX (e.g., sz01, sz02, sz14)</p>
@@ -19,4 +19,5 @@
 <p>Now move to the offset of the seizure annotation (UEE). Similarly to above, once you click on it and highlight it, use Ctrl + G and move to 5 minutes AFTER the offset, and then click <img class="tool-icon" src="assets/image2.png" alt="Mark clip end"> to mark the end of the clip.</p>
 <p>To make the actual clip, click on <img class="tool-icon" src="assets/image3.png" alt="Create clip">.  Unclick video <img class="tool-icon" src="assets/image4.png" alt="Video option"> but make sure the epoch you want is selected under <img class="tool-icon" src="assets/image5.png" alt="Epoch selection">. Please unselect any other epochs that you have previously clipped, so you’re only clipping the epoch of note. One clip should contain one seizure and one seizure only.</p>
 </section><p class="source-note">Adapted from How to Clip Seizures_2026.docx. Internal access instructions, staff contact information, and workstation locations are omitted from this review copy. The clipping instructions and toolbar icons are retained from the source.</p>
-</main></body></html>
+</main><script src="../../assets/reveal.js" defer></script>
+</body></html>

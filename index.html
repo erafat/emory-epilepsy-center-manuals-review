@@ -19,18 +19,23 @@
       <strong>Draft for colleague review — not approved institutional policy.</strong> Do not use this site as a patient-specific order or standalone clinical instruction. Confirm all workflows against current device labeling, institutional policy, and attending direction.
     </section>
 
+    <nav class="catalog-nav"><a href="forms/">Forms &amp; Referrals</a><a href="#manual-results">Browse resources</a></nav>
     <div class="manual-search" hidden>
-      <label for="manual-search">Search manuals</label>
-      <input id="manual-search" type="search" placeholder="Search by title, tag, or keyword…" aria-controls="manual-results" aria-describedby="search-status" autocomplete="off">
+      <label for="manual-search">Search the catalog</label>
+      <input id="manual-search" type="search" placeholder="Search forms, phrases, medications, or workflows…" aria-controls="catalog-results manual-results" aria-describedby="search-status" autocomplete="off">
+      <label for="catalog-type">Resource type</label><select id="catalog-type"><option value="all">All resources</option><option value="form">Forms</option><option value="guide">Guides</option><option value="trial">Clinical trials</option><option value="pdf">PDF manuals</option><option value="external">External manuals</option></select>
+      <p class="source-note">Searches page text and indexed PDF manuals. External manuals are listed by title and summary. Internal-only guides are excluded.</p>
       <p id="search-status" class="search-status" role="status" aria-live="polite" aria-atomic="true"></p>
     </div>
 
+    <section id="catalog-results" aria-label="Search results" hidden></section>
     <section id="manual-results">
       <div class="section-heading">
         <h2>Review Set</h2>
-        <span>07</span>
+        <span>08</span>
       </div>
 
+      <article class="manual-card"><div><p class="kicker">Forms &amp; Referrals</p><h3>Forms directory</h3><p>Synergy EEG orders and ReACT FND referrals: blank forms, preparation checklists, and links to the related workflows.</p></div><div class="actions"><a href="forms/">Browse forms</a></div></article>
       <article class="manual-card">
         <div>
           <p class="kicker">Cortical Stimulation · Educational Review</p>
@@ -93,6 +98,7 @@
       </article>
     </section>
   </main>
+  <script src="assets/search-index.js" defer></script>
   <script src="assets/search.js" defer></script>
 </body>
 </html>
