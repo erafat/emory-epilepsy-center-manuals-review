@@ -242,3 +242,13 @@ mark { background:#f6e3b6; color:inherit; }
 [hidden] { display:none !important; }
 :target { scroll-margin-top:24px; }
 a:focus-visible,select:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+
+/* Keep the catalog title on one line at every screen width. */
+.catalog-hero {
+  max-width: none;
+  container-type: inline-size;
+}
+.catalog-hero h1 {
+  font-size: min(54px, 6cqw);
+  white-space: nowrap;
+}
