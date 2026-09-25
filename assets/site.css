@@ -255,7 +255,8 @@ a:focus-visible,select:focus-visible { outline:2px solid var(--accent); outline-
 
 /* Extend the primary link across the resource card. */
 .manual-card, .search-result { position: relative; }
-.manual-card .actions a:first-child::after,
+.manual-card h3 a::after,
+.manual-card:not(:has(h3 a)) .actions a:first-child::after,
 .search-result h2 a::after {
   content: "";
   position: absolute;
@@ -263,7 +264,8 @@ a:focus-visible,select:focus-visible { outline:2px solid var(--accent); outline-
   z-index: 1;
 }
 .manual-card .manual-tag,
-.manual-card .actions a:not(:first-child) { position: relative; z-index: 2; }
+.manual-card .actions a:not(:first-child),
+.manual-card:has(h3 a) .actions a { position: relative; z-index: 2; }
 .manual-card:hover, .search-result:hover { border-color: var(--accent); }
 .manual-card:focus-within, .search-result:focus-within {
   outline: 2px solid var(--accent);
