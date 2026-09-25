@@ -46,7 +46,7 @@
       type.value !== 'all' ? url.searchParams.set('type', type.value) : url.searchParams.delete('type');
       history.replaceState(null, '', url);
     }
-    if (!active) { status.textContent = `Search within ${entries.length} resources, or browse below.`; return; }
+    if (!active) { status.textContent = ''; return; }
     const matches = entries.filter(e => (type.value === 'all' || e.kind === type.value) && terms.every(t => e.searchable.includes(t))).map(entry => {
       const scoreSection = section => terms.reduce((score,t) => score + (normalize(section.heading).includes(t) ? 6 : 0) + (normalize(section.text).includes(t) ? 2 : 0),0);
       const section = [...entry.sections].sort((a,b) => scoreSection(b)-scoreSection(a))[0];
