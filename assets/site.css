@@ -297,3 +297,6 @@ a:focus-visible,select:focus-visible { outline:2px solid var(--accent); outline-
 .page .section-heading { margin-bottom: 20px; }
 .page .section-heading h2, .page .section-heading h3,
 .page .section-heading h4 { margin-bottom: 0; }
+
+/* Give action buttons breathing room after explanatory content. */
+.page :is(p, ul, ol, dl, blockquote) + .actions { margin-top: 20px; }
