@@ -28,12 +28,14 @@
 body:has(.fax-dialog[open]) { overflow:hidden; }
 @media(max-width:480px) { .fax-dialog-header,.fax-dialog-content { padding:16px; }.fax-dialog-header h2{font-size:24px;} }
 </style>
+<link rel="stylesheet" href="../../assets/navigation.css?v=20260929">
 </head>
 <body>
   <main class="page">
-<nav class="catalog-nav"><a href="../inpatient/">← Inpatient</a></nav>
-    <a class="manual-back" href="../../">← All manuals</a>
-    <header class="hero">
+
+
+    <nav class="return-nav" aria-label="Back navigation"><a href="../../">← Back to Manuals</a><a href="../inpatient/">← Inpatient</a></nav>
+<header class="hero">
       <p class="eyebrow">EMU Operations Resource</p>
       <h1>Weekend On Call</h1>
       <p class="lede">Fellow checklist for Synergy orders and ReAct referrals when an NP is not available in the EMU.</p>
@@ -111,8 +113,8 @@ body:has(.fax-dialog[open]) { overflow:hidden; }
   <dialog class="fax-dialog" id="doximity-dialog" aria-labelledby="doximity-title">
 <div class="fax-dialog-header"><h2 id="doximity-title">Doximity Fax</h2><form method="dialog"><button class="fax-close" autofocus>Close</button></form></div>
 <div class="fax-dialog-content">
-          
-          
+
+
           <p>Use your activated Doximity fax account in accordance with local patient-information policy. Send to the same intended recipient specified in the handoff above.</p>
           <p><strong>Enter the recipient’s fax number directly. The leading 9 is for the hospital fax machine only.</strong></p>
           <h4 id="from-the-website">From the website</h4>
@@ -131,7 +133,7 @@ body:has(.fax-dialog[open]) { overflow:hidden; }
           <p>For image attachments, enable <strong>Contains Images</strong> (website: <strong>Attachments Contain Images</strong>) to preserve image quality. Keep attachments within Doximity’s 50 MB limit.</p>
           <p>Official instructions: <a href="https://support.doximity.com/hc/en-us/articles/360031351294-How-to-Send-a-Fax-From-the-Doximity-Website"><u>Website</u></a> · <a href="https://support.doximity.com/hc/en-us/articles/360050207154-How-to-Send-a-Fax-and-Other-Features-on-your-iOS-Device"><u>iPhone / iPad</u></a> · <a href="https://support.doximity.com/hc/en-us/articles/360030888213-How-to-Send-a-Fax-and-Other-Features-on-your-Android-Device"><u>Android</u></a>. Checked September 14, 2026.</p>
         </div></dialog>
-</main>
+<nav class="return-nav return-nav-bottom" aria-label="Return navigation"><a href="../../">← Back to Manuals</a><a href="../inpatient/">← Inpatient</a></nav></main>
 
 <script>
 (() => {
