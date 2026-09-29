@@ -273,3 +273,10 @@ a:focus-visible,select:focus-visible { outline:2px solid var(--accent); outline-
 }
 
 .search-status:empty { display: none; }
+
+.resource-table { overflow-x: auto; margin: 18px 0; }
+.resource-table table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.resource-table th, .resource-table td { border: 1px solid var(--line); padding: 12px; text-align: left; vertical-align: top; }
+.resource-table th { background: var(--soft); }
+.phrase-text { margin: 18px 0; padding: 20px; background: var(--warm); }
+.actions + .manual-card, .manual-card + p { margin-top: 16px; }
