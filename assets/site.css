@@ -135,19 +135,35 @@ h2 {
 
 /* Linked resource cards should read as controls beside the neutral queue cards. */
 .manual-card:has(:is(h2, h3) a) {
-  border-color: #8caec2;
+  --navy: #fff;
+  --muted: rgba(255, 255, 255, .88);
+  --accent: #f2a900;
+  --line: rgba(255, 255, 255, .5);
+  --soft: rgba(255, 255, 255, .12);
+  border-color: #002f6c;
   border-left: 5px solid var(--accent);
-  background: #eaf3f8;
-  box-shadow: 0 2px 8px rgba(35, 75, 98, .08);
+  background: #002f6c;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 47, 108, .16);
   cursor: pointer;
   transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
 
 .manual-card:has(:is(h2, h3) a):hover,
 .manual-card:has(:is(h2, h3) a):focus-within {
-  background: #dcecf5;
-  border-color: #47738d;
-  box-shadow: 0 5px 16px rgba(35, 75, 98, .14);
+  background: #17477f;
+  border-color: var(--accent);
+  box-shadow: 0 5px 16px rgba(0, 47, 108, .24);
+}
+
+.manual-card:has(:is(h2, h3) a) .manual-tag:hover {
+  background: #fff;
+  color: #002f6c;
+}
+
+.manual-card:has(:is(h2, h3) a) .actions a:first-child {
+  background: #fff;
+  color: #002f6c;
 }
 
 .manual-card + .manual-card {
